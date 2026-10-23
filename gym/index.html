@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYMFIT | Fitness Center</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #111;
+            color: white;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #080808;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            color: #ff3838;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #ff3838;
+        }
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            padding: 60px 8%;
+            background:
+                linear-gradient(90deg, #000 15%, #0009 70%),
+                url("bg.webp")
+                center/cover;
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 6vw, 70px);
+            margin: 15px 0;
+        }
+
+        .hero h1 span {
+            color: #ff3838;
+        }
+
+        .hero p {
+            color: #ddd;
+            line-height: 1.8;
+            max-width: 500px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff3838;
+            color: white;
+            padding: 13px 25px;
+            margin-top: 25px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #d90000;
+        }
+
+        section {
+            padding: 65px 8%;
+            text-align: center;
+        }
+
+        .heading {
+            font-size: 35px;
+            margin-bottom: 35px;
+        }
+
+        .heading span {
+            color: #ff3838;
+        }
+
+        .about p {
+            max-width: 750px;
+            margin: auto;
+            color: #ccc;
+            line-height: 1.8;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #202020;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 22px;
+        }
+
+        .card h3 {
+            color: #ff3838;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        .price {
+            font-size: 30px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .price small {
+            font-size: 14px;
+            color: #bbb;
+        }
+
+        .contact {
+            background: #191919;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+            display: grid;
+            gap: 15px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #444;
+            background: #252525;
+            color: white;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #080808;
+            color: #aaa;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .hero {
+                min-height: 70vh;
+                padding: 40px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">GYMFIT</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#programs">Programs</a>
+            <a href="#plans">Plans</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div>
+            <p>WELCOME TO GYMFIT FITNESS CLUB</p>
+            <h1>PUSH YOUR<br><span>LIMITS WITH US</span></h1>
+            <p>
+                Train harder. Become stronger. Stay healthy.
+                Start your fitness journey with us today!
+            </p>
+            <a href="#plans" class="btn">JOIN OUR GYM</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2 class="heading">ABOUT <span>US</span></h2>
+        <p>
+            At GYMFIT, we help you achieve your fitness goals with
+            expert guidance, modern equipment, strength training,
+            and a motivating environment. Every day is a new chance
+            to become stronger and healthier.
+        </p>
+    </section>
+
+    <section id="programs">
+        <h2 class="heading">OUR <span>PROGRAMS</span></h2>
+
+        <div class="cards">
+            <div class="card">
+                <img src="strength.avif">
+                <div class="card-content">
+                    <h3>Strength Training</h3>
+                    <p>Build strength and improve your fitness with weights.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="train.jpg">
+                <div class="card-content">
+                    <h3>Personal Training</h3>
+                    <p>Follow a workout routine designed for your goals.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="cardio.jpg">
+                <div class="card-content">
+                    <h3>Cardio Fitness</h3>
+                    <p>Improve stamina, endurance, and heart health.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="plans">
+        <h2 class="heading">MEMBERSHIP <span>PLANS</span></h2>
+
+        <div class="cards">
+            <div class="card">
+                <div class="card-content">
+                    <h3>Basic Plan</h3>
+                    <div class="price">₹999<small>/month</small></div>
+                    <p>Gym access</p>
+                    <p>Basic equipment</p>
+                    <a href="#contact" class="btn">Choose Plan</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <h3>Premium Plan</h3>
+                    <div class="price">₹1,999<small>/month</small></div>
+                    <p>Full gym access</p>
+                    <p>Trainer guidance</p>
+                    <a href="#contact" class="btn">Choose Plan</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <h3>Pro Plan</h3>
+                    <div class="price">₹2,999<small>/month</small></div>
+                    <p>Personal training</p>
+                    <p>Customized workout plan</p>
+                    <a href="#contact" class="btn">Choose Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">JOIN <span>US TODAY</span></h2>
+
+        <form id="joinForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+            <textarea id="message" rows="4" placeholder="Your fitness goals"></textarea>
+            <button class="btn" type="submit">Submit Details</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2026 GYMFIT Fitness Club | Stay Strong, Stay Healthy</p>
+    </footer>
+
+</body>
+</html>
